@@ -1,3 +1,4 @@
+package model;
 public abstract class Animal {
     private String id;
     private String nombre;

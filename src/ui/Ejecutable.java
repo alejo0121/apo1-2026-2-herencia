@@ -1,5 +1,10 @@
+package ui;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import model.Animal;
+import model.Gato;
+import model.Perro;
 
 public class Ejecutable {
     public static void main(String[] args) {
