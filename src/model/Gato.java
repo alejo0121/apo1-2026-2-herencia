@@ -1,5 +1,8 @@
 package model;
-public class Gato extends Animal {
+
+import java.io.Serializable;
+
+public class Gato extends Animal implements Adoptable, Serializable, Cloneable {
     private String raza;
 
     public Gato(String id, String nombre, String raza) {
@@ -25,5 +28,15 @@ public class Gato extends Animal {
         return "Gato [raza=" + raza + ", id=" + getId() + ", nombre=" + getNombre() + "]";
     }
 
+    public boolean cumpleConEsquemaVacunación(){
+        return true;
+    } 
+
+    public int calcularEdadMinimaMeses(){
+        return 6;
+    }
     
+    public boolean esApto(){
+        return cumpleConEsquemaVacunación() && this.getEdadMeses() >= calcularEdadMinimaMeses();
+    }
 }

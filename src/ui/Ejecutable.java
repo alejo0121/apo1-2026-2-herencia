@@ -2,6 +2,7 @@ package ui;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.Adoptable;
 import model.Animal;
 import model.Gato;
 import model.Perro;
@@ -62,8 +63,14 @@ public class Ejecutable {
                 contPerros++;
             } else if (a instanceof Gato) {
                 Gato g = (Gato)a;
-                g.getRaza();
                 contGatos++;
+            }
+
+            if (a instanceof Adoptable) {
+                Adoptable ad = (Adoptable) a;
+                if (ad.esApto()) {
+                    System.out.println(a.getNombre() + " se puede adoptar!");
+                }
             }
         }
 

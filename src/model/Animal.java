@@ -2,10 +2,20 @@ package model;
 public abstract class Animal {
     private String id;
     private String nombre;
+    private int edadMeses;
 
     public Animal(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
+        this.edadMeses = 1;
+    }
+
+    public int getEdadMeses() {
+        return edadMeses;
+    }
+
+    public void setEdadMeses(int edadMeses) {
+        this.edadMeses = edadMeses;
     }
 
     public String getId() {
